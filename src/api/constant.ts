@@ -1,4 +1,4 @@
-export const apiPrefix = 'chenweilin.xin/blogBack/frontApi/';
+export const apiPrefix = '';
 
 export const apiUrls = {
   // 文章相关
