@@ -6,7 +6,7 @@ module.exports = {
   trailingComma: 'es5',
   // 不使用缩进符，而使用空格
   useTabs: false,
-  // tab 用两个空格代替
+  // tab 用2个空格代替
   tabWidth: 2,
   // 仅在语法可能出现错误的时候才会添加分号
   semi: true,
@@ -39,4 +39,4 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
   // 换行符使用 lf
   endOfLine: 'lf',
-}
+};
