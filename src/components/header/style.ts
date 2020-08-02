@@ -14,12 +14,6 @@ export const HeaderBox = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 0 25px;
-
-    .nav-link {
-      cursor: pointer;
-    }
-
-    .nav-menu {
-    }
+    font-size: 14px;
   }
 `;

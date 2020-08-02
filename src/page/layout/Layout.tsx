@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutBox } from './style';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-// import history from '../../constant/history';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { RouterMap } from '../../constant/history';
 import Home from '../home';
 import Archive from '../archive';
 import Article from '../article';
@@ -11,18 +11,16 @@ import Search from '../search';
 const Layout = () => {
   return (
     <LayoutBox>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/archive" component={Archive} />
-          <Route path="/article" component={Article} />
-          <Route path="/Search" component={Search} />
-          <Redirect from="*" to="/" />
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path={RouterMap.index} component={Home} />
+        <Route path={RouterMap.about} component={About} />
+        <Route path={RouterMap.archive} component={Archive} />
+        <Route path={RouterMap.article} component={Article} />
+        <Route path={RouterMap.search} component={Search} />
+        <Redirect from="*" to={RouterMap.index} />
+      </Switch>
     </LayoutBox>
   );
-}
+};
 
 export default Layout;

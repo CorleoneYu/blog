@@ -6,7 +6,7 @@ import { apiUrls } from './constant';
  * @param currentPage 当前页数
  * @param countPerPage 每页条数
  */
-export function getBlogs(currentPage: number = 1, countPerPage: number = 10) {
+export function getBlogsApi(currentPage: number, countPerPage: number) {
   return get(apiUrls.blog.getBlogs, {
     currentPage,
     countPerPage,
@@ -17,7 +17,7 @@ export function getBlogs(currentPage: number = 1, countPerPage: number = 10) {
  * 请求文章
  * @param id 文章 id
  */
-export function getBlogById(id: number) {
+export function getBlogByIdApi(id: number) {
   return get(apiUrls.blog.getBlogById, {
     id,
   });
@@ -29,7 +29,7 @@ export function getBlogById(id: number) {
  * @param currentPage
  * @param countPerPage
  */
-export function getBlogsByTagId(id: number, currentPage: number, countPerPage: number) {
+export function getBlogsByTagIdApi(id: number, currentPage: number, countPerPage: number) {
   return get(apiUrls.blog.getBlogsByTagId, {
     id,
     currentPage,

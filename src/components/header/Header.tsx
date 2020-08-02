@@ -1,14 +1,15 @@
 import React from 'react';
 import { HeaderBox } from './style';
+import HeaderMenuList from '../header-menu-list';
+import { Link } from 'react-router-dom';
+import { RouterMap } from '../../constant/history';
 
 export default function Header() {
   return (
     <HeaderBox>
       <div className="nav-bar">
-        <div className="nav-link">xxx</div>
-        <div className="nav-menu">
-          <div className=""></div>
-        </div>
+        <Link to={RouterMap.index}>首页</Link>
+        <HeaderMenuList />
       </div>
     </HeaderBox>
   );

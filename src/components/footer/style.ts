@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { maxWidth } from '../../constant/style';
 
-export const footerHeight = 200;
+export const footerHeight = 350;
 
 export const FooterBox = styled.div`
   background: white;
@@ -16,6 +17,34 @@ export const FooterBox = styled.div`
       font-size: 13px;
       padding: 0 25px;
       color: #5f5f5f;
+    }
+  }
+
+  .footer-info {
+    max-width: ${maxWidth};
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+
+    .info-item {
+      box-sizing: border-box;
+      width: 33.33333%;
+      padding: 0 30px;
+
+      .info-title {
+        font-size: 14px;
+        color: #5f5f5f;
+        margin-bottom: 10px;
+      }
+
+      .link-list {
+        font-size: 13px;
+        line-height: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #767676;
+      }
     }
   }
 `;

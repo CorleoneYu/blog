@@ -1,3 +1,49 @@
+import { IBlog, ITag, IPaginationInfo } from '../type';
+
+export function formatPaginationInfo(info: any): IPaginationInfo {
+  return {
+    count: info.count,
+    countPerPage: info.countPerPage,
+    currentPage: info.currentPage,
+    limitOffset: info.limitOffset,
+    limitRows: info.limitRows,
+    sumPage: info.sumPage,
+  };
+}
+
+/**
+ * 格式化标签数据
+ * @param tags 后台的 tag 数据
+ */
+export function formatTags(tags: any[]): ITag[] {
+  return tags.map((tag) => {
+    return {
+      id: tag.id,
+      tagName: tag.tagName,
+    };
+  });
+}
+
+/**
+ * 格式化博客数据
+ * @param blogs 后台的 blog 数据
+ */
+export function formatBlogs(blogs: any[]): IBlog[] {
+  return blogs.map((blog) => {
+    return {
+      id: blog.id,
+      title: blog.title,
+      description: blog.description,
+      heat: blog.heat,
+      tagList: formatTags(blog.tagList),
+      _createTime: blog.createTime,
+      _updateTime: blog.updateTime,
+      createTime: formatTime(blog.createTime),
+      updateTime: formatTime(blog.updateTime),
+    };
+  });
+}
+
 /**
  * 格式化文件大小, 输出成带单位的字符串
  * @param {Number} size 文件大小
