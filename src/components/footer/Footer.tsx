@@ -4,6 +4,7 @@ import { ILink } from '../../type';
 import { Link } from 'react-router-dom';
 import { RouterMap } from '../../constant/history';
 import useRecentBlogs from '../../hooks/useRecentBlogs';
+import useRecentComments from '../../hooks/useRecentComments';
 
 const socialList: ILink[] = [
   {
@@ -18,6 +19,7 @@ const socialList: ILink[] = [
 
 export default function Footer() {
   const { recentBlogs } = useRecentBlogs();
+  const { recentComments } = useRecentComments();
 
   return (
     <FooterBox>
@@ -50,7 +52,16 @@ export default function Footer() {
         <div className="info-item recent-commits">
           <h3 className="info-title">RECENT COMMENTS</h3>
           <div className="link-list">
-
+            {recentComments.map((comment) => {
+              return (
+                <div className="link" key={comment.id}>
+                  <Link to={RouterMap.article}>
+                    <span>{comment.name ? comment.name : '女装大佬'}：</span>
+                    <span>{comment.content}</span>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

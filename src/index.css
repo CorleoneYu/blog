@@ -1,28 +1,345 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+/* josefin-sans-regular */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot');
+  /* IE9 Compat Modes */
+  src: local('Josefin Sans'), local('JosefinSans-Normal'),
+    url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.woff') format('woff'),
+    /* Modern Browsers */ url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('//lib.baomitu.com/fonts/josefin-sans/josefin-sans-regular.svg#JosefinSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* pt-sans-regular */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot');
+  /* IE9 Compat Modes */
+  src: local('PT Sans'), local('PTSans-Normal'),
+    url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.woff')
+      format('woff'),
+    /* Modern Browsers */ url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('//lib.baomitu.com/fonts/pt-sans/pt-sans-regular.svg#PTSans')
+      format('svg');
+  /* Legacy iOS */
+}
+
+html::-webkit-scrollbar-track-piece {
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  height: 40px;
+  background-color: #eee;
+  border-radius: 16px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+
+html {
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
+    'Hiragino Sans GB', STHeiti, 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana,
+    sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif; */
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 auto;
+  color: #313131;
+  text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7f7f7;
 }
 
+body > :first-child {
+  margin-top: 0 !important;
+}
+
+body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+  margin: 20px 0;
+  vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 code,
+h1 tt,
+h2 code,
+h2 tt,
+h3 code,
+h3 tt,
+h4 code,
+h4 tt,
+h5 code,
+h5 tt,
+h6 code,
+h6 tt {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 1.4em;
+  color: #222;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #444;
+}
+
+h4 {
+  font-size: 1.1em;
+  color: #555;
+}
+
+h5 {
+  font-size: 1em;
+  color: #555;
+}
+
+h6 {
+  font-size: 1em;
+  color: #555;
+}
+
+body > h1:first-child,
+body > h1:first-child + h2,
+body > h2:first-child,
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 a {
   text-decoration: none;
+  color: #313131;
+  outline: 0;
 }
 
+a:active,
+a:focus,
 a:hover {
-  text-decoration: underline;
+  color: #eb5055;
+  outline: 0;
 }
 
-ul,
 ol,
-ul li,
-ol li {
+ul {
+  padding-left: 30px;
+}
+
+ol li,
+ul li {
   list-style: none;
+}
+
+ol li ol:first-of-type,
+ol li ul:first-of-type,
+ol li > :first-child,
+ul li ol:first-of-type,
+ul li ul:first-of-type,
+ul li > :first-child {
+  margin-top: 0;
+}
+
+li {
+  word-wrap: break-word;
+}
+
+li p {
+  margin: 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+
+pre {
+  position: relative;
+  margin: 20px 0;
+}
+
+code {
+  /* font-family: Menlo, Bitstream Vera Sans Mono, DejaVu Sans Mono, Monaco, Consolas, monospace; */
+  font-size: 13px;
+  margin: 0 3px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+}
+
+pre code {
+  font-size: 13px;
+  display: block;
+  overflow: auto;
+  padding: 1.3em;
+  border: 0;
+}
+
+blockquote {
+  padding: 0 10px 0 20px;
+  border-left: 4px solid #ddd;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  margin: 15px 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid #ddd;
+  background: 0 0;
+}
+
+table {
+  font-size: 13px;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-break: normal;
+}
+
+table th {
+  font-weight: 700;
+}
+
+table td,
+table th {
+  padding: 6px 13px;
+  white-space: nowrap;
+  border: 1px solid #ddd;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:hover {
+  background-color: #f7f7f7;
+}
+
+table thead tr {
+  background-color: #f7f7f7;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei,
+    WenQuanYi Micro Hei, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  resize: none;
+}
+
+input:focus:invalid,
+input:required:invalid,
+textarea:focus:invalid,
+textarea:required:invalid {
+  box-shadow: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #5f5f5f;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #5f5f5f;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #5f5f5f;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #5f5f5f;
 }

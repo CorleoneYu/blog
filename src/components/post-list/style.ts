@@ -6,7 +6,6 @@ export const PostListBox = styled.div`
   flex-wrap: wrap;
 
   .post-list-item {
-    box-sizing: border-box;
     width: 33.333%;
     padding: 15px;
   }
@@ -38,11 +37,9 @@ export const PostItemBox = styled.div`
 
   .item-label {
     position: relative;
-    box-sizing: border-box;
     height: 130px;
     padding: 10px 20px 40px 20px;
     background: white;
-    z-index: 10;
 
     .item-title {
       font-size: 17px;
@@ -53,7 +50,6 @@ export const PostItemBox = styled.div`
 
     .item-tag-list {
       position: absolute;
-      box-sizing: border-box;
       bottom: 0;
       right: 0;
       width: 100%;

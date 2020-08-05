@@ -13,6 +13,10 @@ const menuList: ILink[] = [
     render: '关于我们',
     link: RouterMap.about,
   },
+  {
+    render: '搜索',
+    link: RouterMap.search,
+  },
 ];
 
 export default function HeaderMenuList() {

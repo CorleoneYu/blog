@@ -1,4 +1,4 @@
-import { IBlog, ITag, IPaginationInfo } from '../type';
+import { IBlog, ITag, IPaginationInfo, IComment } from '../type';
 
 export function formatPaginationInfo(info: any): IPaginationInfo {
   return {
@@ -40,6 +40,24 @@ export function formatBlogs(blogs: any[]): IBlog[] {
       _updateTime: blog.updateTime,
       createTime: formatTime(blog.createTime),
       updateTime: formatTime(blog.updateTime),
+    };
+  });
+}
+
+/**
+ * 格式化评论数据
+ * @param comments 后台的 comment 数据
+ */
+export function formatComments(comments: any[]): IComment[] {
+  return comments.map((comment) => {
+    return {
+      id: comment.id,
+      content: comment.content,
+      mailbox: comment.content,
+      createTime: formatTime(comment.createTime),
+      _createTime: comment.createTime,
+      blogId: comment.blogId,
+      name: comment.name,
     };
   });
 }

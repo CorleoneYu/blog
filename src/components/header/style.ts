@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxWidth } from '../../constant/style';
 
 export const HeaderBox = styled.div`
   position: fixed;
@@ -11,9 +12,12 @@ export const HeaderBox = styled.div`
   background: white;
 
   .nav-bar {
+    overflow: hidden;
+    max-width: ${maxWidth};
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    padding: 0 25px;
     font-size: 14px;
   }
 `;

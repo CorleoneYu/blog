@@ -31,3 +31,13 @@ export interface IPaginationInfo {
   limitRows: 0;
   sumPage: 22;
 }
+
+export interface IComment {
+  id: number;
+  content: string;
+  mailbox: string;
+  createTime: string;
+  _createTime: number;
+  blogId?: number;
+  name?: string;
+}

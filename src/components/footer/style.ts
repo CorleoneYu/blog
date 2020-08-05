@@ -27,7 +27,6 @@ export const FooterBox = styled.div`
     display: flex;
 
     .info-item {
-      box-sizing: border-box;
       width: 33.33333%;
       padding: 0 30px;
 

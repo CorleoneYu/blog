@@ -6,7 +6,6 @@ export const LayoutBox = styled.div`
   position: relative;
   margin: 0 auto;
   padding: 120px 20px 0;
-  box-sizing: border-box;
   max-width: ${maxWidth};
   min-height: calc(100vh - ${footerHeight}px);
 `;
